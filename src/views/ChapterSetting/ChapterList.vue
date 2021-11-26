@@ -19,7 +19,7 @@
         <p>
           <a-tag
             :color="record.type === 'FIRST_EXAM' ? '#87d068' : '#108ee9'">
-            {{ record.type === 'FIRST_EXAM' ? '热身赛' : '资格赛' }}
+            {{ record.type === 'FIRST_EXAM' ? '预热赛' : '初赛' }}
           </a-tag>
         </p>
         <p>
@@ -46,6 +46,13 @@
             download
             :href="`/manager/download/department/${record.cid}`"
             style="margin-right: 10px">导出各部门的竞赛情况</a>
+        </p>
+        <p>
+          <a
+            target="_blank"
+            download
+            :href="`/manager/download/department/${record.cid}/0`"
+            style="margin-right: 10px">导出练习情况</a>
         </p>
         <p>
           <a-button type="primary" @click="exportData(record)">导出指定部门数据</a-button>

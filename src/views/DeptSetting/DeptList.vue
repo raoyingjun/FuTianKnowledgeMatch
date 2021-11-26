@@ -45,6 +45,11 @@
             download
             :href="`/manager/download/log/${cid}/${record.did}`"
             style="margin-right: 10px">导出该部门的人员竞赛成绩</a>
+          <a
+            target="_blank"
+            download
+            :href="`/manager/download/department/${cid}/${record.did}`"
+            style="margin-right: 10px">导出该部门的练习情况</a>
           <a-button
             type="primary"
             v-if="!isSub"
