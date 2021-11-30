@@ -18,8 +18,8 @@
         </p>
         <p>
           <a-tag
-            :color="record.type === 'FIRST_EXAM' ? '#87d068' : '#108ee9'">
-            {{ record.type === 'FIRST_EXAM' ? '预热赛' : '初赛' }}
+            :color="STATUS_EXAM_TYPE[record.type].color">
+            {{ STATUS_EXAM_TYPE[record.type].name }}
           </a-tag>
         </p>
         <p>
@@ -149,6 +149,21 @@ const STATUS_COLOR = {
   EXPIRED: 'orange',
 };
 
+const STATUS_EXAM_TYPE = {
+  EXERCISE: {
+    color: '#87d068',
+    name: '预赛',
+  },
+  FIRST_EXAM: {
+    color: '#108ee9',
+    name: '初赛',
+  },
+  REPEATED_EXAM: {
+    color: '#ffa600',
+    name: '复赛',
+  },
+};
+
 const columns = [
   {
     title: '名称',
@@ -197,6 +212,7 @@ export default {
       manageQAInfoVisible: false,
       chapterData: {},
       chapterExamData: {},
+      STATUS_EXAM_TYPE,
     };
   },
   filters: {

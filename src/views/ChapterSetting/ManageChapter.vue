@@ -29,11 +29,14 @@
     </a-form-model-item>
     <a-form-model-item label="章节类型" prop="type">
       <a-radio-group v-model="form.type" :disabled="!!data">
+        <a-radio-button value="EXERCISE">
+          预赛
+        </a-radio-button>
         <a-radio-button value="FIRST_EXAM">
-          预热赛
+          初赛
         </a-radio-button>
         <a-radio-button value="REPEATED_EXAM">
-          初赛
+          复赛
         </a-radio-button>
       </a-radio-group>
       创建后无法修改
